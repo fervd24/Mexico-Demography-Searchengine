@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ShowStates from "./showStates";
+import ShowMenus from "./showMenus";
 
 export default function CallApi() {
     const [expensesInfo, setExpensesInfo] = useState([]);
@@ -39,7 +39,7 @@ export default function CallApi() {
 
     return(
         <>
-            <ShowStates 
+            <ShowMenus 
             expenses={expensesInfo} 
             statesInfo={statesInfo}
             cityInfo={cityInfo}
