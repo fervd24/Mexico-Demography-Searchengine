@@ -2,12 +2,11 @@ import { useState } from "react"
 import OptGen from "./optGen";
 import ShowStateData from "./showStateData";
 
-export default function ShowMenus({expenses, statesInfo, cityInfo}) {
+export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, setIdsIndicadores}) {
     const [stateValue, setStateValue] = useState('');
     const [cityValue, setCityValue] = useState('');
-    const [selectedStateData, setSelectedStateData] = useState(null); 
-    const [selectedCityData, setSelectedCityData] = useState(null);
-    
+    const [selectedStateData, setSelectedStateData] = useState(null);  
+    const [selectedCityData, setSelectedCityData] = useState(null); 
 
     function handleChangeState(e) {
         setStateValue(e.target.value);
@@ -16,14 +15,15 @@ export default function ShowMenus({expenses, statesInfo, cityInfo}) {
     function handleChangeCity(e) {
         setCityValue(e.target.value);
     }
-
+    
     function handleClick() {
         statesInfo.filter(state => stateValue === state.nom_agee ? setSelectedStateData({...state}): false);
+        statesInfo.filter(state => stateValue === state.nom_agee ? changeId(state.cvegeo): false);
         cityInfo.filter(state => cityValue === state.nom_agem ? setSelectedCityData({...state}): false);
-            
+        
         console.log(stateValue);
         console.log(cityValue);
-    }
+    }      
 
     return(
         <div>
@@ -36,7 +36,7 @@ export default function ShowMenus({expenses, statesInfo, cityInfo}) {
                 handleClick={handleClick}
             />           
             {
-                selectedStateData ? <ShowStateData stateData={selectedStateData}/>: false
+                selectedStateData ? <ShowStateData stateData={selectedStateData} setIdsIndicadores={setIdsIndicadores}/>: false
             }
             <h2>Municipios</h2>
             <OptGen 
@@ -46,7 +46,7 @@ export default function ShowMenus({expenses, statesInfo, cityInfo}) {
                 handleClick={handleClick}
             />
             {
-                selectedCityData ? <ShowStateData stateData={selectedCityData}/>: false
+                selectedCityData ? <ShowStateData stateData={selectedCityData} />: false
             }
         </div>
     )
