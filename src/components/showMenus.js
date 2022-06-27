@@ -2,7 +2,7 @@ import { useState } from "react"
 import OptGen from "./optGen";
 import ShowStateData from "./showStateData";
 
-export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, setIdsIndicadores}) {
+export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, setIdsIndicadores, ingEgStateInfo}) {
     const [stateValue, setStateValue] = useState('');
     const [cityValue, setCityValue] = useState('');
     const [selectedStateData, setSelectedStateData] = useState(null);  
@@ -36,7 +36,7 @@ export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, set
                 handleClick={handleClick}
             />           
             {
-                selectedStateData ? <ShowStateData stateData={selectedStateData} setIdsIndicadores={setIdsIndicadores}/>: false
+                selectedStateData ? <ShowStateData stateData={selectedStateData} setIdsIndicadores={setIdsIndicadores} ingEgStateInfo={ingEgStateInfo}/>: false
             }
             <h2>Municipios</h2>
             <OptGen 
