@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+.mainContainer{
+    background-color: #001f3f;
+    color: #7FDBFF;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 2rem auto;
+    width:600px;
+    border-radius: 5px;
+    padding: 2rem 0;
+}
+
+.titleContainer {
+    margin: 2rem;
+    width: 400px;
+    margin: 2rem auto;
+}
+
+.searchBarContainer{
+    margin: 3rem;
+}
+.searchBarContainer p{
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.stateDataContainer {
+    text-align: start;
+    width: 350px;
+    margin: 0 auto;
+}
+

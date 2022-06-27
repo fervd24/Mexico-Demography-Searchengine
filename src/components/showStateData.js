@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import indicatorData from "../config/stateIndicatorsData";
 import ShowFinancial from "./showFinancialData";
 
+import styles from "./showStateData.module.css"
+
 export default function ShowStateData({stateData, setIdsIndicadores, ingEgStateInfo = null}) {
     
     function getIndicator(allIdData) {
@@ -20,10 +22,10 @@ export default function ShowStateData({stateData, setIdsIndicadores, ingEgStateI
     },[stateData]);
 
     return(
-        <div>
+        <div className={styles.showStateDataContainer}>
             <h1>{stateData.nom_agee || stateData.nom_agem}</h1>
             <h2>DEMOGRAFIA</h2>
-            <div>Poblacion: {stateData.pob}</div>
+            <div>Poblacion Total: {stateData.pob}</div>
             <div>Poblacion Masculina: {stateData.pob_mas}</div>
             <div>Poblacion Femenina: {stateData.pob_fem}</div>
             <div>Viviendas Habitadas: {stateData.viv}</div> 

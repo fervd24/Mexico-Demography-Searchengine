@@ -2,6 +2,8 @@ import { useState } from "react"
 import OptGen from "./optGen";
 import ShowStateData from "./showStateData";
 
+import styles from "./showMenus.module.css";
+
 export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, setIdsIndicadores, ingEgStateInfo}) {
     const [stateValue, setStateValue] = useState('');
     const [cityValue, setCityValue] = useState('');
@@ -26,28 +28,36 @@ export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, set
     }      
 
     return(
-        <div>
-            <h1>{expenses.label}</h1>
-            <h2>Estados</h2>
-            <OptGen 
-                option={statesInfo} 
-                defSent="-- Estados --" 
-                handleChange={handleChangeState}
-                handleClick={handleClick}
-            />           
-            {
-                selectedStateData ? <ShowStateData stateData={selectedStateData} setIdsIndicadores={setIdsIndicadores} ingEgStateInfo={ingEgStateInfo}/>: false
-            }
-            <h2>Municipios</h2>
-            <OptGen 
-                option={cityInfo} 
-                defSent="-- Municipios --"
-                handleChange={handleChangeCity}
-                handleClick={handleClick}
-            />
-            {
-                selectedCityData ? <ShowStateData stateData={selectedCityData} />: false
-            }
+        <div className={styles.mainContainer}>
+            <div className={styles.titleContainer}>
+                <h1>CONSULTAS DEMOFIN</h1>
+                <h4>Fuente: INEGI({expenses.label})</h4>
+            </div>
+            <div className={styles.searchBarContainer}>
+                <p>Estados</p>
+                <OptGen 
+                    option={statesInfo} 
+                    defSent="-- Estados --" 
+                    handleChange={handleChangeState}
+                    handleClick={handleClick}
+                />    
+                <p>Municipios</p>
+                <OptGen 
+                    option={cityInfo} 
+                    defSent="-- Municipios --"
+                    handleChange={handleChangeCity}
+                    handleClick={handleClick}
+                />       
+            </div>
+            <div className={styles.stateDataContainer}>
+                {
+                    selectedStateData ? <ShowStateData stateData={selectedStateData} setIdsIndicadores={setIdsIndicadores} ingEgStateInfo={ingEgStateInfo}/>: false
+                }
+                {
+                    selectedCityData ? <ShowStateData stateData={selectedCityData} />: false
+                }
+            </div>
+            
         </div>
     )
 }

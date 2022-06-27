@@ -39,7 +39,6 @@ export default function CallApi() {
                 egInfo: egresosData[0].OBSERVATIONS
             });
 
-            console.log(process.env.REACT_APP_INEGI_TOKEN);
             console.log(expensesData);    
             console.log(statesData);    
             console.log(cityData);  

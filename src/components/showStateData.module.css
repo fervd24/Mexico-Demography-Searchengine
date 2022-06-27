@@ -1,0 +1,14 @@
+.showStateDataContainer h1{
+    color: red;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.showStateDataContainer h2{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.showStateDataContainer div{
+    margin: 0.9rem 0;
+}
