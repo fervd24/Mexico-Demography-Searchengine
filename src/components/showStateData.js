@@ -25,10 +25,10 @@ export default function ShowStateData({stateData, setIdsIndicadores, ingEgStateI
         <div className={styles.showStateDataContainer}>
             <h1>{stateData.nom_agee || stateData.nom_agem}</h1>
             <h2>DEMOGRAFIA</h2>
-            <div>Poblacion Total: {stateData.pob}</div>
-            <div>Poblacion Masculina: {stateData.pob_mas}</div>
-            <div>Poblacion Femenina: {stateData.pob_fem}</div>
-            <div>Viviendas Habitadas: {stateData.viv}</div> 
+            <div>Poblacion Total: <span className={styles.values}>{stateData.pob}</span></div>
+            <div>Poblacion Masculina: <span className={styles.values}>{stateData.pob_mas}</span></div>
+            <div>Poblacion Femenina: <span className={styles.values}>{stateData.pob_fem}</span></div>
+            <div>Viviendas Habitadas: <span className={styles.values}>{stateData.viv}</span></div> 
             {ingEgStateInfo ? <ShowFinancial financialInfo={ingEgStateInfo}/>: null}
         </div>
     )

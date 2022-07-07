@@ -53,6 +53,7 @@ export default function ShowMenus({expenses, statesInfo, cityInfo, changeId, set
                 {
                     selectedStateData ? <ShowStateData stateData={selectedStateData} setIdsIndicadores={setIdsIndicadores} ingEgStateInfo={ingEgStateInfo}/>: false
                 }
+                <hr/>
                 {
                     selectedCityData ? <ShowStateData stateData={selectedCityData} />: false
                 }

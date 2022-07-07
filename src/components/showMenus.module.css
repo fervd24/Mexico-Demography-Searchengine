@@ -8,7 +8,7 @@
     font-family: sans-serif;
     margin: 2rem auto;
     width:600px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 2rem 0;
 }
 
@@ -32,5 +32,9 @@
     text-align: start;
     width: 350px;
     margin: 0 auto;
+}
+
+.stateDataContainer hr{
+    margin: 4rem 0 2rem 0;
 }
 

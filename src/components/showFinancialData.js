@@ -11,10 +11,10 @@ export default function ShowFinancial({financialInfo}) {
                     <div className={styles.financialItem} key={item.TIME_PERIOD}>
                         <h4>{item.TIME_PERIOD}</h4>
                         <div>
-                            Ingresos: $ {item.OBS_VALUE}
+                            Ingresos: <span className={styles.financialValue}>$ {item.OBS_VALUE}</span>
                         </div>
                         <div>
-                            Egresos: $ {item.OBS_VALUE}
+                            Egresos: <span className={styles.financialValue}>$ {item.OBS_VALUE}</span>
                         </div>
                     </div>
                 )
