@@ -1,0 +1,14 @@
+.infoContainer{
+    margin-top: 2rem;
+}
+
+.infoContainer h2{
+    font-size: 27px;
+}
+.infoContainer hr{
+    margin-bottom: 1.5rem;
+}
+
+.infoContainer span{
+    color: #fff;
+}
