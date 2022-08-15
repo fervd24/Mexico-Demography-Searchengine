@@ -1,10 +1,10 @@
-import CallApi from "./components/api";
 
+import { Home } from "./components/Home";
 
 function App() {
   return (
     <div >
-      <CallApi/>
+      <Home/>
     </div>
   );
 }
