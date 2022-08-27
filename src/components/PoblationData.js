@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './PoblationData.module.css';
 
-export const PoblationDataGrid = ({selectedData}) => {
+export const PoblationData = ({selectedData}) => {
   
   return (
     <div className={styles.infoContainer}>
