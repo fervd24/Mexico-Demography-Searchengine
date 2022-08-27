@@ -19,7 +19,7 @@ export const FinancialDataGrid = ({selectedData, idsIndicadores, setIdsIndicador
     })
 
     const [columnDefs] = useState([
-        {field: 'Año', sortable: true, width: 140},
+        {field: 'Año', sortable: true, width: 130},
         {field: 'Ingresos', sortable: true},
         {field: 'Egresos', sortable: true},
       ]);
