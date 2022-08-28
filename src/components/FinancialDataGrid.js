@@ -36,7 +36,6 @@ export const FinancialDataGrid = ({selectedData, idsIndicadores, setIdsIndicador
 
     const updateIndicators = () => {
         
-        console.log('selec2', selectedData);
         const [selectedIndicators] = indicatorData.filter(item => item.cvegeo === selectedData.cvegeo)
         
         if(selectedIndicators){
@@ -44,7 +43,6 @@ export const FinancialDataGrid = ({selectedData, idsIndicadores, setIdsIndicador
                 ing: selectedIndicators.indicatorIng,
                 eg: selectedIndicators.indicatorEg
             })
-            console.log('selecIndicators', selectedIndicators);
         } 
     }
     
