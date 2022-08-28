@@ -1,5 +1,6 @@
 # Mexico Demography Search Engine
 
+![demo-gif](demo.gif) / ![](name-of-gif-file.gif)
 ## React version
 
 React 18.2.0  
