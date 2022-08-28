@@ -2,6 +2,9 @@
     margin-top: 2rem;
 }
 
+.infoContainer div{
+    margin-bottom: 0.5rem;
+}
 .infoContainer h2{
     font-size: 27px;
 }

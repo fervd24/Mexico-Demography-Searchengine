@@ -3,7 +3,7 @@ import { useSelect } from '../hooks/useSelect';
 import { FinancialDataGrid } from './FinancialDataGrid';
 
 import styles from "./Home.module.css";
-import { PoblationDataGrid } from './PoblationData';
+import { PoblationData } from './PoblationData';
 
 export const Home = () => {
     const [idsIndicadores, setIdsIndicadores] = useState({ing: '', eg: ''});
@@ -51,8 +51,8 @@ export const Home = () => {
             <div className={styles.dataContainer}>
                 {selectedStateData && 
                     <div className={styles.dataSubcontainer}>
-                        <PoblationDataGrid selectedData={selectedStateData} />
-                        {selectedCityData && <PoblationDataGrid selectedData={selectedCityData}/>}
+                        <PoblationData selectedData={selectedStateData} />
+                        {selectedCityData && <PoblationData selectedData={selectedCityData}/>}
                         <FinancialDataGrid selectedData={selectedStateData} idsIndicadores={idsIndicadores} setIdsIndicadores={setIdsIndicadores}/>
                     </div>
                 }

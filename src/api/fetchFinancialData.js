@@ -7,11 +7,6 @@ export const fetchFinancialData = async(idsIndicadores, setFinancialStateData) =
         
         const resEg = await axios.get(`https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/${idsIndicadores.eg}/es/0700/false/BIE/2.0/${process.env.REACT_APP_INEGI_TOKEN}?type=json`);
         const egresosData = await resEg.data.Series;
-              
-        console.log(idsIndicadores);
-
-        console.log('ing',ingresosData[0].OBSERVATIONS);  
-        console.log('eg',egresosData[0].OBSERVATIONS); 
          
         setFinancialStateData({
             ing: ingresosData[0].OBSERVATIONS,

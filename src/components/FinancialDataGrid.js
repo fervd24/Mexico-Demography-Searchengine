@@ -19,7 +19,7 @@ export const FinancialDataGrid = ({selectedData, idsIndicadores, setIdsIndicador
     })
 
     const [columnDefs] = useState([
-        {field: 'Año', sortable: true, width: 140},
+        {field: 'Año', sortable: true, width: 130},
         {field: 'Ingresos', sortable: true},
         {field: 'Egresos', sortable: true},
       ]);
@@ -66,7 +66,7 @@ export const FinancialDataGrid = ({selectedData, idsIndicadores, setIdsIndicador
     <div className={styles.mainFinancial}>
         <h2>Finanzas: {selectedData.nom_agee}</h2>
         <hr/>
-        <div className='ag-theme-alpine-dark' style={{height:350, width:'auto', marginTop: 40}}>
+        <div className='ag-theme-alpine-dark' style={{height:330, width:'auto', marginTop: 40}}>
               <AgGridReact
                 columnDefs={columnDefs}
                 rowData={rowsFinancialData}
